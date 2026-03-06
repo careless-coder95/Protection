@@ -4,6 +4,7 @@
 from pyrogram.enums import ParseMode
 from pyrogram import Client, filters
 from pyrogram.types import ChatPermissions, InlineKeyboardMarkup, InlineKeyboardButton
+import re   # <-- regex ke liye zaroori
 
 API_ID = 31773201
 API_HASH = "4de8b7e5dec61796c782bdc400759248"
@@ -19,13 +20,20 @@ bot = Client(
 user_links = {}
 
 
-# link detection
+#link system --------
 def has_link(text):
     if not text:
         return False
-    links = ["http://", "https://", "t.me", "www."]
     text = text.lower()
-    return any(link in text for link in links)
+    # general links
+    link_pattern = r"(https?://|www\.|t\.me/|telegram\.me/)"
+    # channel/group usernames
+    channel_pattern = r"@(\w*(group|channel|bot)\w*)"
+    if re.search(link_pattern, text):
+        return True
+    if re.search(channel_pattern, text):
+        return True
+    return False
 
 
 # LINK PROTECTION
