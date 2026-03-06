@@ -77,16 +77,15 @@ async def link_protection(client, message):
             )
 
             mute_text = f"""
-🔇 {message.from_user.first_name} has been muted.
-
-Reason: Sending too many links.
+🔇 {message.from_user.first_name} <b>ʏᴏᴜ ʜᴀꜱ ʙᴇᴇη ᴍᴜᴛᴇᴅ.</b>
+⚠️ 𝐑𝐄𝐀𝐒𝐎𝐍 :<b> ꜱᴇηᴅɪηɢ ᴛᴏᴏ ᴍᴀηʏ ʟɪηᴋꜱ.</b>
 """
 
             buttons = InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            "🔓 Unmute",
+                            "⌯ 🔓 ᴜηᴍᴜᴛᴇ ⌯",
                             callback_data=f"unmute_{user_id}"
                         )
                     ]
@@ -113,7 +112,7 @@ async def unmute_user(client, callback_query):
 
     # check if admin can restrict members
     if not (admin.status == "creator" or (admin.privileges and admin.privileges.can_restrict_members)):
-        await callback_query.answer("❌ Only admins can unmute users.", show_alert=True)
+        await callback_query.answer("❌ ᴏηʟʏ ᴀᴅᴍɪηꜱ ᴄᴀη ᴜηᴍᴜᴛᴇ ᴜꜱᴇʀꜱ.", show_alert=True)
         return
 
     await client.restrict_chat_member(
@@ -128,7 +127,7 @@ async def unmute_user(client, callback_query):
     )
 
     await callback_query.message.edit_text(
-        f"""✅ User has been unmuted by {callback_query.from_user.first_name}."""
+        f"""<b>🔊 ᴜꜱᴇʀ ʜᴀꜱ ʙᴇᴇη ᴜηᴍᴜᴛᴇᴅ ʙʏ 👤</b> {callback_query.from_user.first_name}."""
     )
 
 
@@ -257,7 +256,7 @@ async def about_menu(client, callback_query):
     buttons = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("⌯ ❍ᴡηєʀ ⌯", url="https://t.me/YOUR_USERNAME")
+                InlineKeyboardButton("⌯ ❍ᴡηєʀ ⌯", url="t.me/CarelessxOwner")
             ],
             [
                 InlineKeyboardButton("⌯ sᴜᴘᴘσʀᴛ ⌯", url="https://t.me/CarelessxWorld"),
