@@ -159,18 +159,17 @@ async def delete_edited(client, message):
 @bot.on_callback_query(filters.regex("help"))
 async def help_menu(client, callback_query):
 
-    text = f"""<b>╔══❖ 𝐂𝐎𝐍𝐓𝐑𝐎𝐋 𝐏𝐀𝐍𝐄𝐋𝐋 ❖══╗</b
+    text = f"""<b>╔══❖ 𝐂𝐎𝐍𝐓𝐑𝐎𝐋 𝐏𝐀𝐍𝐄𝐋𝐋 ❖══╗</b><br>
 
 <b>❍</b> 𝐈𝐌𝐏𝐎𝐑𝐓𝐀𝐍𝐓 𝐏𝐄𝐑𝐌𝐈𝐒𝐒𝐈𝐎𝐍:<br>
-<blockquote>
 <b>➻ ᴄʜᴀηɢᴇ ɢʀᴏᴜᴘ ɪηꜰᴏ</b><br>
 <b>➻ ᴅᴇʟᴇᴛᴇ ᴍᴇꜱꜱᴀɢᴇꜱ</b><br>
 <b>➻ ʀɪꜱᴛʀɪᴄᴛ ᴜꜱᴇʀꜱ</b><br>
 <b>➻ ʙᴀη / ᴍᴜᴛᴇ ᴜꜱᴇʀꜱ</b>
-</blockquote>
 
+<b>✦━━━━━━━━━━━━━━━━━━━━━✦</b>
 <b>❍</b> 𝐖𝐇𝐀𝐓 𝐖𝐈𝐋𝐋 𝐓𝐇𝐄 𝐁𝐎𝐓 𝐃𝐎 ?<br>
-<blockquote>
+<blockquote expandable>
 <b>➻ ʟʟ ʟɪηᴋꜱ ʙʟᴏᴄᴋᴇᴅ</b><br>
 <b>➻ ᴇᴅɪᴛᴇᴅ ᴍᴇꜱꜱᴀɢᴇꜱ ᴧᴜᴛᴏ ᴅᴇʟᴇᴛᴇᴅ</b><br>
 <b>➻ ɪꜰ ᴀηʏ ᴍᴇᴍʙᴇʀ sᴇηᴅꜱ ᴀ ʟɪηᴋ, ʙᴏᴛ ᴡɪʟʟ ᴅᴇʟᴇᴛᴇ ɪᴛ ᴧηᴅ ɢɪᴠᴇ ᴀ ᴡᴀʀɴɪηɢ</b><br>
@@ -281,7 +280,7 @@ async def about_menu(client, callback_query):
 @bot.on_callback_query(filters.regex("back"))
 async def back_menu(client, callback_query):
 
-    text = f"""<b>👋 ʜᴇʟʟᴏ {message.from_user.first_name} 💕</b>
+    text = f"""<b>👋 ʜᴇʟʟᴏ 💕</b>
 <b>❍ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ˹𝐏ʀᴏᴛᴇᴄᴛɪᴏɴ˼  . 🥳</b>
 ✦━━━━━━━━━━━━━━━━━━━━━✦
 <b>🛠  ɪ ᴘʀᴏᴛᴇᴄᴛ ɢʀᴏᴜᴘꜱ ꜰʀᴏᴍ:</b>
