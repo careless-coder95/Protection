@@ -228,7 +228,7 @@ async def start(client, message):
     )
 
     await message.reply_photo(
-        photo="YOUR_PHOTO_URL",
+        photo="https://files.catbox.moe/7olhes.jpg",
         caption=f"<tg-spoiler>{text}</tg-spoiler>",
         parse_mode=ParseMode.HTML,
         reply_markup=buttons
@@ -307,7 +307,7 @@ async def back_menu(client, callback_query):
     )
 
     await callback_query.message.reply_photo(
-    photo="https://example.com/photo.jpg",
+    photo="https://files.catbox.moe/7olhes.jpg",
     caption=text,
     parse_mode=ParseMode.HTML,
     has_spoiler=True,
