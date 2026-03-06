@@ -142,46 +142,22 @@ async def delete_edited(client, message):
         pass
 
 
-# -------------------------------
-# START / WELCOME SYSTEM (LAST)
-# -------------------------------
-
-@bot.on_message(filters.private & filters.command("start"))
-async def start(client, message):
-
-    text = f"""
-Hello {message.from_user.first_name} 👋
-
-Welcome to the protection bot.
-
-Use the buttons below to navigate.
-"""
-
-    buttons = InlineKeyboardMarkup(
-        [
-            [InlineKeyboardButton("➕ Add Me In A Group", url="https://t.me/YOUR_BOT_USERNAME?startgroup=true")],
-            [
-                InlineKeyboardButton("📖 Help", callback_data="help"),
-                InlineKeyboardButton("ℹ️ About", callback_data="about")
-            ]
-        ]
-    )
-
-    await message.reply_text(text, reply_markup=buttons)
-
+#-------------------------------------------#
+# -----------------HELP---------------------#
+#-------------------------------------------#
 
 @bot.on_callback_query(filters.regex("help"))
 async def help_menu(client, callback_query):
 
     text = f"""
-📖 Instructions
+<b>📖 BOT INSTRUCTIONS</b>
 
-• This bot deletes links
-• Users sending too many links get muted
-• Edited messages are deleted
-• Admins are ignored
+<b>• THIS BOT DELETES LINKS</b>
+<b>• USERS SENDING TOO MANY LINKS GET MUTED</b>
+<b>• EDITED MESSAGES ARE DELETED</b>
+<b>• ADMINS ARE IGNORED</b>
 
-Add the bot to your group and give admin permissions.
+<b>ADD THE BOT TO YOUR GROUP AND GIVE ADMIN PERMISSIONS.</b>
 """
 
     buttons = InlineKeyboardMarkup(
@@ -190,18 +166,56 @@ Add the bot to your group and give admin permissions.
         ]
     )
 
-    await callback_query.message.edit_text(text, reply_markup=buttons)
+    await callback_query.message.edit_text(
+        text,
+        reply_markup=buttons,
+        parse_mode="html"
+    )
 
+#-------------------------------------------#
+# ------------START WELCOME ----------------#
+#-------------------------------------------#
 
+@bot.on_message(filters.private & filters.command("start"))
+async def start(client, message):
+
+    text = f"""
+<b>HELLO {message.from_user.first_name} 👋</b>
+
+<b>WELCOME TO THE PROTECTION BOT.</b>
+
+<b>USE THE BUTTONS BELOW TO NAVIGATE.</b>
+"""
+
+    buttons = InlineKeyboardMarkup(
+        [
+            [InlineKeyboardButton("➕ ADD ME IN A GROUP", url="https://t.me/YOUR_BOT_USERNAME?startgroup=true")],
+            [
+                InlineKeyboardButton("📖 HELP", callback_data="help"),
+                InlineKeyboardButton("ℹ️ ABOUT", callback_data="about")
+            ]
+        ]
+    )
+
+    await message.reply_photo(
+        photo="YOUR_PHOTO_URL",
+        caption=f"<tg-spoiler>{text}</tg-spoiler>",
+        parse_mode="html",
+        reply_markup=buttons
+    )
+
+#-------------------------------------------#
+# -----------------ABOUT -------------------#
+#-------------------------------------------#
 @bot.on_callback_query(filters.regex("about"))
 async def about_menu(client, callback_query):
 
     text = f"""
-ℹ️ About This Bot
+<b>ℹ️ ABOUT THIS BOT</b>
 
-Owner: @YOUR_USERNAME
+<b>OWNER:</b> @YOUR_USERNAME
 
-Use the buttons below for support or updates.
+<b>USE THE BUTTONS BELOW FOR SUPPORT OR UPDATES.</b>
 """
 
     buttons = InlineKeyboardMarkup(
@@ -219,29 +233,39 @@ Use the buttons below for support or updates.
         ]
     )
 
-    await callback_query.message.edit_text(text, reply_markup=buttons)
+    await callback_query.message.edit_text(
+        text,
+        reply_markup=buttons,
+        parse_mode="html"
+    )
 
+#----------------------#
+#-----BACK BUTTON------#
+#----------------------#
 
 @bot.on_callback_query(filters.regex("back"))
 async def back_menu(client, callback_query):
 
     text = f"""
-Hello {callback_query.from_user.first_name} 👋
+<b>HELLO {callback_query.from_user.first_name} 👋</b>
 
-Welcome to the protection bot.
+<b>WELCOME TO THE PROTECTION BOT.</b>
 """
 
     buttons = InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton("➕ Add Me In A Group", url="https://t.me/YOUR_BOT_USERNAME?startgroup=true")],
+            [InlineKeyboardButton("➕ ADD ME IN A GROUP", url="https://t.me/YOUR_BOT_USERNAME?startgroup=true")],
             [
-                InlineKeyboardButton("📖 Help", callback_data="help"),
-                InlineKeyboardButton("ℹ️ About", callback_data="about")
+                InlineKeyboardButton("📖 HELP", callback_data="help"),
+                InlineKeyboardButton("ℹ️ ABOUT", callback_data="about")
             ]
         ]
     )
 
-    await callback_query.message.edit_text(text, reply_markup=buttons)
-
+    await callback_query.message.edit_text(
+        text,
+        reply_markup=buttons,
+        parse_mode="html"
+    )
 
 bot.run()
