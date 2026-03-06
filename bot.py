@@ -207,10 +207,15 @@ Use the buttons below for support or updates.
     buttons = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("📢 Support", url="YOUR_SUPPORT_LINK"),
-                InlineKeyboardButton("📡 Updates", url="YOUR_UPDATE_LINK")
+                InlineKeyboardButton("👤 Owner", url="https://t.me/YOUR_USERNAME")
             ],
-            [InlineKeyboardButton("⬅️ Back", callback_data="back")]
+            [
+                InlineKeyboardButton("📢 Support", url="https://t.me/YOUR_SUPPORT_LINK"),
+                InlineKeyboardButton("📡 Updates", url="https://t.me/YOUR_UPDATE_LINK")
+            ],
+            [
+                InlineKeyboardButton("⬅️ Back", callback_data="back")
+            ]
         ]
     )
 
