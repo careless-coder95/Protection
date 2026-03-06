@@ -1,8 +1,8 @@
 from pyrogram import Client, filters
 from pyrogram.types import ChatPermissions, InlineKeyboardMarkup, InlineKeyboardButton
 
-API_ID = 123456
-API_HASH = "YOUR_API_HASH"
+API_ID = 31773201
+API_HASH = "4de8b7e5dec61796c782bdc400759248"
 BOT_TOKEN = "YOUR_BOT_TOKEN"
 
 bot = Client(
