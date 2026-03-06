@@ -191,12 +191,19 @@ async def help_menu(client, callback_query):
 @bot.on_message(filters.private & filters.command("start"))
 async def start(client, message):
 
-    text = f"""
-<b>HELLO {message.from_user.first_name} 👋</b>
-
-<b>WELCOME TO THE PROTECTION BOT.</b>
-
-<b>USE THE BUTTONS BELOW TO NAVIGATE.</b>
+    text = f"""<b>👋 ʜᴇʟʟᴏ {message.from_user.first_name} 💕</b>
+<b>❍ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ˹𝐏ʀᴏᴛᴇᴄᴛɪᴏɴ˼  . 🥳</b>
+✦━━━━━━━━━━━━━━━━━━━━━✦
+<b>🛠  ɪ ᴘʀᴏᴛᴇᴄᴛ ɢʀᴏᴜᴘꜱ ꜰʀᴏᴍ:</b>
+<b>➜ ᴇxᴛᴇʀηᴧʟ ʟɪηᴋꜱ 🚫</b>
+<b>➜ ᴇᴅɪᴛᴇᴅ ᴍᴇꜱꜱᴧɢᴇꜱ ✏️</b>
+<b>➜ ʟɪɴᴋs sᴘᴀᴍᴍɪɴɢ 🔗</b>
+<b>➜ Iғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ᴍᴇ, ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ℹ️ </b>
+<b>✦━━━━━━━━━━━━━━━━━━━━━✦</b>
+<b>➤ ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href="https://t.me/CarelessxOwner">˹ᴍɪsᴛᴇʀ ꭙ sᴛᴀʀᴋ˼</a></b>
+<b>➤ ᴍᴏʀᴇ ʙᴏᴛs : <a href="https://t.me/StarkxNetwrk">˹sᴛᴀʀᴋ ꭙ ɴᴇᴛᴡᴏʀᴋ˼</a></b>
+<b>➤ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : <a href="https://t.me/ll_CarelessxCoder_ll">˹ᴄᴀʀᴇʟᴇss ꭙ ᴄᴏᴅᴇʀ˼</a></b>
+<b>╰─━━━  ✦ ❀ ✦ ❖ ✦ ❀ ✦   ━━━─</b>
 """
 
     buttons = InlineKeyboardMarkup(
@@ -222,12 +229,17 @@ async def start(client, message):
 @bot.on_callback_query(filters.regex("about"))
 async def about_menu(client, callback_query):
 
-    text = f"""
-<b>ℹ️ ABOUT THIS BOT</b>
-
-<b>OWNER:</b> @YOUR_USERNAME
-
-<b>USE THE BUTTONS BELOW FOR SUPPORT OR UPDATES.</b>
+    text = f"""<b>╭─━━━ ✦ ᴀʙᴏᴜᴛ ʙᴏᴛ ✦ ━━━─╮</b>
+<b>│</b>
+<b>│ 🤖 ɴᴀᴍᴇ : ᴍɪsᴛᴇʀ sᴛᴀʀᴋ</b>
+<b>│ 👑 ᴏᴡɴᴇʀ : <a href="https://t.me/CarelessxOwner">˹ᴍɪsᴛᴇʀ ꭙ sᴛᴀʀᴋ˼</a></b>
+<b>│ 📢 ᴜᴘᴅᴀᴛᴇs : <a href="https://t.me/ll_CarelessxCoder_ll">˹ᴄᴀʀᴇʟᴇss ꭙ ᴄᴏᴅᴇʀ˼</a></b>
+<b>│ 🚀 ᴠᴇʀsɪᴏɴ : v2.6</b>
+<b>│ 🐍 ʟᴀɴɢᴜᴀɢᴇ : ᴘʏᴛʜᴏɴ 3</b>
+<b>│ 📚 ʟɪʙʀᴀʀʏ : ᴘʏʀᴏɢʀᴀᴍ</b>
+<b>│ 📡 ʜᴏsᴛᴇᴅ ᴏɴ : ᴠᴘs</b>
+<b>│</b>
+<b>╰━ ✦ ᴘᴏᴡᴇʀᴇᴅ ʙʏ <a href="https://t.me/ll_CarelessxCoder_ll">˹ᴄᴀʀᴇʟᴇss ꭙ ᴄᴏᴅᴇʀ˼</a></b>
 """
 
     buttons = InlineKeyboardMarkup(
@@ -258,10 +270,19 @@ async def about_menu(client, callback_query):
 @bot.on_callback_query(filters.regex("back"))
 async def back_menu(client, callback_query):
 
-    text = f"""
-<b>HELLO {callback_query.from_user.first_name} 👋</b>
-
-<b>WELCOME TO THE PROTECTION BOT.</b>
+    text = f"""<b>👋 ʜᴇʟʟᴏ {message.from_user.first_name} 💕</b>
+<b>❍ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ˹𝐏ʀᴏᴛᴇᴄᴛɪᴏɴ˼  . 🥳</b>
+✦━━━━━━━━━━━━━━━━━━━━━✦
+<b>🛠  ɪ ᴘʀᴏᴛᴇᴄᴛ ɢʀᴏᴜᴘꜱ ꜰʀᴏᴍ:</b>
+<b>➜ ᴇxᴛᴇʀηᴧʟ ʟɪηᴋꜱ 🚫</b>
+<b>➜ ᴇᴅɪᴛᴇᴅ ᴍᴇꜱꜱᴧɢᴇꜱ ✏️</b>
+<b>➜ ʟɪɴᴋs sᴘᴀᴍᴍɪɴɢ 🔗</b>
+<b>➜ Iғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ᴍᴇ, ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ℹ️ </b>
+<b>✦━━━━━━━━━━━━━━━━━━━━━✦</b>
+<b>➤ ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href="https://t.me/CarelessxOwner">˹ᴍɪsᴛᴇʀ ꭙ sᴛᴀʀᴋ˼</a></b>
+<b>➤ ᴍᴏʀᴇ ʙᴏᴛs : <a href="https://t.me/StarkxNetwrk">˹sᴛᴀʀᴋ ꭙ ɴᴇᴛᴡᴏʀᴋ˼</a></b>
+<b>➤ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : <a href="https://t.me/ll_CarelessxCoder_ll">˹ᴄᴀʀᴇʟᴇss ꭙ ᴄᴏᴅᴇʀ˼</a></b>
+<b>╰─━━━  ✦ ❀ ✦ ❖ ✦ ❀ ✦   ━━━─</b>
 """
 
     buttons = InlineKeyboardMarkup(
