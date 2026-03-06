@@ -58,10 +58,9 @@ async def link_protection(client, message):
 
         await message.delete()
 
-        warn_text = f"""
-🚫 Links are not allowed in this group.
-
-Please do not send links.
+        warn_text = f"""⚠️ 𝐖𝐀𝐑𝐍𝐈𝐍𝐆 : 
+<b>🚫 ʟɪηᴋꜱ ᴀʀᴇ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ɪη ᴛʜɪꜱ ɢʀᴏᴜᴘ.</b>
+<b>❌ ᴘʟᴇᴀꜱᴇ ᴅᴏ ɴᴏᴛ sᴇηᴅ ʟɪηᴋꜱ.</b>
 """
 
         await client.send_message(chat_id, warn_text)
