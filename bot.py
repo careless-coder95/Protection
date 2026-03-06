@@ -174,7 +174,7 @@ async def help_menu(client, callback_query):
 
     buttons = InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton("⬅️ Back", callback_data="back")]
+            [InlineKeyboardButton("⌯ 🔙 ʙᴀᴄᴋ ⌯", callback_data="back")]
         ]
     )
 
@@ -201,10 +201,10 @@ async def start(client, message):
 
     buttons = InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton("➕ ADD ME IN A GROUP", url="https://t.me/YOUR_BOT_USERNAME?startgroup=true")],
+            [InlineKeyboardButton("⌯ ➕ ᴀᴅᴅ ᴍᴇ ɪɴ ᴀ ɢʀᴏᴜᴘ ⌯", url="https://t.me/Protectioncc_bot?startgroup=true")],
             [
-                InlineKeyboardButton("📖 HELP", callback_data="help"),
-                InlineKeyboardButton("ℹ️ ABOUT", callback_data="about")
+                InlineKeyboardButton("⌯ ℹ️ ʜᴇʟᴘ ⌯", callback_data="help"),
+                InlineKeyboardButton("⌯ 🧑🏻‍💻 ᴀʙᴏᴜᴛ ⌯", callback_data="about")
             ]
         ]
     )
@@ -233,14 +233,14 @@ async def about_menu(client, callback_query):
     buttons = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("👤 Owner", url="https://t.me/YOUR_USERNAME")
+                InlineKeyboardButton("⌯ ❍ᴡηєʀ ⌯", url="https://t.me/YOUR_USERNAME")
             ],
             [
-                InlineKeyboardButton("📢 Support", url="https://t.me/YOUR_SUPPORT_LINK"),
-                InlineKeyboardButton("📡 Updates", url="https://t.me/YOUR_UPDATE_LINK")
+                InlineKeyboardButton("⌯ sᴜᴘᴘσʀᴛ ⌯", url="https://t.me/CarelessxWorld"),
+                InlineKeyboardButton("⌯ ᴜᴘᴅᴀᴛᴇ ⌯", url="https://t.me/ll_CarelessxCoder_ll")
             ],
             [
-                InlineKeyboardButton("⬅️ Back", callback_data="back")
+                InlineKeyboardButton("⌯ 🔙 ʙᴀᴄᴋ ⌯", callback_data="back")
             ]
         ]
     )
@@ -266,10 +266,10 @@ async def back_menu(client, callback_query):
 
     buttons = InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton("➕ ADD ME IN A GROUP", url="https://t.me/YOUR_BOT_USERNAME?startgroup=true")],
+            [InlineKeyboardButton("⌯ ➕ ᴀᴅᴅ ᴍᴇ ɪɴ ᴀ ɢʀᴏᴜᴘ ⌯", url="https://t.me/Protectioncc_bot?startgroup=true")],
             [
-                InlineKeyboardButton("📖 HELP", callback_data="help"),
-                InlineKeyboardButton("ℹ️ ABOUT", callback_data="about")
+                InlineKeyboardButton("⌯ ℹ️ ʜᴇʟᴘ ⌯", callback_data="help"),
+                InlineKeyboardButton("⌯ 🧑🏻‍💻 ᴀʙᴏᴜᴛ ⌯", callback_data="about")
             ]
         ]
     )
