@@ -1,3 +1,7 @@
+# AUTHOR: STARKIE
+#OWNER OF CARELESS CODER
+
+from pyrogram.enums import ParseMode
 from pyrogram import Client, filters
 from pyrogram.types import ChatPermissions, InlineKeyboardMarkup, InlineKeyboardButton
 
@@ -169,7 +173,7 @@ async def help_menu(client, callback_query):
     await callback_query.message.edit_text(
         text,
         reply_markup=buttons,
-        parse_mode="html"
+        parse_mode=ParseMode.HTML
     )
 
 #-------------------------------------------#
@@ -200,7 +204,7 @@ async def start(client, message):
     await message.reply_photo(
         photo="YOUR_PHOTO_URL",
         caption=f"<tg-spoiler>{text}</tg-spoiler>",
-        parse_mode="html",
+        parse_mode=ParseMode.HTML,
         reply_markup=buttons
     )
 
@@ -236,7 +240,7 @@ async def about_menu(client, callback_query):
     await callback_query.message.edit_text(
         text,
         reply_markup=buttons,
-        parse_mode="html"
+        parse_mode=ParseMode.HTML
     )
 
 #----------------------#
@@ -262,10 +266,12 @@ async def back_menu(client, callback_query):
         ]
     )
 
-    await callback_query.message.edit_text(
-        text,
-        reply_markup=buttons,
-        parse_mode="html"
+    await callback_query.message.reply_photo(
+    photo="https://example.com/photo.jpg",
+    caption=text,
+    parse_mode=ParseMode.HTML,
+    has_spoiler=True,
+    reply_markup=buttons
     )
 
 bot.run()
